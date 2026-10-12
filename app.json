@@ -1,0 +1,33 @@
+{
+  "name": "GridShield NJ",
+  "slug": "gridshield-scratch",
+  "icon": "./assets/icon.png",
+  "plugins": [
+    "expo-sqlite",
+    "expo-background-task",
+    "./withRemoveiOSNotificationEntitlement.js",
+    [
+      "expo-splash-screen",
+      {
+        "image": "./assets/splash-icon.png",
+        "backgroundColor": "#0E2A4D",
+        "imageWidth": 200
+      }
+    ]
+  ],
+  "ios": {
+    "supportsTablet": true,
+    "infoPlist": {
+      "UIBackgroundModes": [
+        "processing"
+      ],
+      "BGTaskSchedulerPermittedIdentifiers": [
+        "com.expo.modules.backgroundtask.processing"
+      ]
+    },
+    "bundleIdentifier": "com.anonymous.gridshield-scratch"
+  },
+  "android": {
+    "package": "com.anonymous.gridshieldscratch"
+  }
+}
