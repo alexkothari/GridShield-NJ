@@ -1,6 +1,6 @@
 import * as Notifications from 'expo-notifications';
 
-// This tells iOS how to display a notification if it arrives while the app is open
+// Display a notification if it arrives while the app is open
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
     shouldShowBanner: true,
