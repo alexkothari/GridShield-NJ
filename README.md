@@ -1,257 +1,238 @@
-GridShield NJ
+<div align="center">
 
-Proactive power outage preparedness for New Jersey communities.
+<img src="assets/icon.png" alt="GridShield NJ logo" width="120" />
 
-GridShield NJ is a mobile application designed to help New Jersey residents prepare for power outages and severe weather. It combines live weather alerts, location-aware emergency resources, outage risk assessments, and offline-accessible information in one place.
+# GridShield NJ
 
-The project focuses on community resilience, emergency preparedness, and helping residents access important resources when severe weather disrupts everyday life.
+### Proactive power outage preparedness for New Jersey communities
 
-Project status: Public development project — initial GitHub release.
+Live weather alerts &nbsp;·&nbsp; Outage risk assessments &nbsp;·&nbsp; Local emergency resources &nbsp;·&nbsp; Offline-ready
 
-Important: GridShield NJ is a preparedness tool, not an official emergency alert system. Risk assessments are estimates, and the availability or accuracy of individual resources may change. Always follow instructions from official emergency management authorities and contact emergency services when necessary.
+<br />
 
-Features
+![Expo SDK 54](https://img.shields.io/badge/Expo_SDK-54-000020?style=for-the-badge&logo=expo&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-0.81-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Platforms](https://img.shields.io/badge/iOS_%7C_Android-0E2A4D?style=for-the-badge)
+![Release](https://img.shields.io/badge/release-v1.0.0-2EA44F?style=for-the-badge)
+![Data](https://img.shields.io/badge/data-NWS_API-1D4ED8?style=for-the-badge)
 
-Weather Alerts and Outage Risk
+<br />
 
-* Retrieves active weather alerts from the National Weather Service (NWS).
-* Calculates a rule-based risk assessment using weather alert information.
-* Displays risk information to help users prepare for potential disruptions.
-* Maintains locally stored risk history for reference.
-* Supports background tasks and local notifications for relevant risk changes.
+[Features](#-features) &nbsp;•&nbsp;
+[How it works](#-how-it-works) &nbsp;•&nbsp;
+[Getting started](#-getting-started) &nbsp;•&nbsp;
+[Roadmap](#-roadmap) &nbsp;•&nbsp;
+[Contributing](#-contributing)
 
-Risk assessments use a custom rules-based calculation.
+</div>
 
-Local Emergency Resources
+<br />
 
-* Location-aware access to local emergency and utility contacts.
-* Support for all 39 municipalities in Morris County, New Jersey.
-* Manual town selection when GPS access is unavailable or when a user wants to view another municipality.
-* Quick access to available contact information, including calling and messaging options.
+> [!IMPORTANT]
+> **GridShield NJ is a preparedness tool, not an official emergency alert system.** Risk assessments are estimates, and the accuracy or availability of individual resources may change. Always follow instructions from official emergency management authorities, and call **911** in an emergency.
 
-Medical Emergency Triage
+## 🌩️ About
 
-Includes a guided medical triage screen intended to help users navigate emergency-related decisions.
+GridShield NJ is a mobile app that helps New Jersey residents get ready for power outages and severe weather. It brings live weather alerts, location-aware emergency resources, outage risk assessments, and offline-accessible information into one place, so the important stuff is easy to find when everyday life gets disrupted.
 
-This feature is informational and does not replace professional medical advice, emergency dispatchers, or emergency services.
+The project is built around community resilience: making it simple to know what's coming, who to call, and where to go.
 
-Cooling and Warming Centers
+## ✨ Features
 
-Provides a map-based directory of selected cooling and warming locations, with directions available through mapping applications.
+| | Feature | What it does |
+|:-:|---|---|
+| ⚡ | **Weather alerts & outage risk** | Pulls active alerts from the National Weather Service and turns them into a rule-based outage risk assessment, with a locally stored risk history. |
+| 🔔 | **Background checks & notifications** | Runs background tasks and sends local notifications when relevant risk changes. |
+| 📍 | **Local emergency resources** | Location-aware utility and emergency contacts for all **39 municipalities in Morris County**, with one-tap calling and messaging. |
+| 🏘️ | **Manual town select** | Pick any municipality yourself when GPS is unavailable, or to look up somewhere else. |
+| 🩺 | **Medical emergency triage** | A guided screen to help users think through emergency-related decisions. |
+| ❄️ | **Cooling & warming centers** | A map-based directory of selected centers, with directions through your mapping app. |
+| 🌳 | **Tree removal directory** | Companies that can help after storms. |
+| 🚧 | **Road conditions** | Live incident and closure info from the official 511NJ website. |
+| 📄 | **Emergency contact PDF** | Generate and share a PDF with utility and emergency contacts, tree removal contacts, a power outage checklist, and food safety guidance for refrigerated and frozen food. |
+| 💾 | **Offline-first storage** | SQLite keeps contacts and risk history on the device so they're still there without a connection. |
 
-Tree Removal Resources
+> [!NOTE]
+> Offline storage doesn't mean everything works offline. Live weather alerts, road conditions, and other online resources need a connection.
 
-Provides a directory of tree removal companies to help users identify potential assistance following storms.
+> [!WARNING]
+> The medical triage feature is informational only. It does not replace professional medical advice, emergency dispatchers, or emergency services.
 
-Road Conditions
+<!--
+## 📱 Screenshots
 
-Provides access to live road incident and closure information through the official 511NJ website.
+Add screenshots to an `assets/screenshots/` folder and uncomment this block:
 
-Emergency Contact PDF
+<div align="center">
+  <img src="assets/screenshots/home.png" width="22%" alt="Home and risk level" />
+  <img src="assets/screenshots/risk.png" width="22%" alt="Risk details" />
+  <img src="assets/screenshots/shelters.png" width="22%" alt="Cooling and warming centers" />
+  <img src="assets/screenshots/triage.png" width="22%" alt="Medical triage" />
+</div>
+-->
 
-Generates a shareable emergency preparedness document containing information such as:
+## 🧭 How it works
 
-* Utility and emergency contacts.
-* Tree removal contacts.
-* A power outage checklist.
-* Food safety guidance for refrigerated and frozen food during an outage.
+```mermaid
+flowchart LR
+    NWS["🌩️ NWS Alerts API"] --> W["weather.js<br/>rule-based risk engine"]
+    BG["⏱️ Background task"] -. refreshes .-> W
+    W --> R["📊 Outage risk level"]
+    R --> DB[("💾 SQLite<br/>risk history")]
+    R --> N["🔔 Local notifications"]
+    LOC["📍 GPS or manual town select"] --> M["🏘️ Municipal contacts"]
+    M --> PDF["📄 Emergency PDF"]
+```
 
-Users can review and share the generated PDF from within the application.
+Risk levels come from a custom **rules-based calculation** on active NWS alert data. There's no machine learning and no API key required.
 
-Offline-First Local Storage
+## 🛠️ Tech stack
 
-Uses SQLite to persist selected information locally, including contacts and risk history.
+| Layer | Tools |
+|---|---|
+| **Framework** | React Native 0.81 · React 19 · Expo SDK 54 · Expo Dev Client |
+| **Navigation** | React Navigation (native stack) |
+| **Storage** | Expo SQLite |
+| **Location & notifications** | Expo Location · Expo Notifications |
+| **Background work** | Expo Background Task · Expo Task Manager |
+| **PDF & sharing** | Expo Print · Expo File System · Expo Sharing |
+| **Maps & web content** | React Native Maps · React Native WebView |
+| **Data** | National Weather Service public API (no key needed) |
 
-This helps preserve access to stored information when connectivity is unavailable. However, live weather alerts, embedded road conditions, and other online resources may not be accessible without an internet connection.
+## 🚀 Getting started
 
-Technology Stack
+For developers who want to inspect, modify, or run the project locally.
 
-GridShield NJ is built with:
+**Prerequisites**
 
-* React Native — Cross-platform mobile application framework.
-* Expo SDK 54 — Native development and application tooling.
-* React Navigation — Screen navigation.
-* Expo SQLite — Local database and persistence.
-* Expo Location — Device location and location-related functionality.
-* Expo Notifications — Local notifications.
-* Expo Background Task and Task Manager — Background task functionality.
-* Expo Print and File System — Emergency PDF generation and file handling.
-* React Native Maps — Shelter map interface.
-* React Native WebView — Embedded road conditions and PDF viewing.
-* National Weather Service API — Public weather alert data.
+- Git, Node.js and npm
+- **macOS + Xcode** for local iOS builds
+- **Android Studio + Android SDK** for local Android builds
+- A physical device or simulator/emulator
 
-The application uses the public National Weather Service API for weather alerts and does not require an API key for that endpoint.
+> [!CAUTION]
+> GridShield NJ uses native modules and a custom Expo development client. **Expo Go is not supported** for the current configuration.
 
-Project Structure
+**1. Clone the repo**
 
-The repository contains the primary application screens, supporting modules, and native project files.
-
-File or directory	Purpose
-* App.js	Application entry point and navigation configuration.
-* DirectoryScreen.js	Main screen containing risk information, contacts, and emergency resources.
-* RiskDetailScreen.js	Additional explanation of the risk assessment.
-* CheckLogScreen.js	Risk and check history interface.
-* TriageScreen.js	Medical triage interface.
-* ShelterScreen.js	Cooling and warming center map.
-* TreeCompanyScreen.js	Tree removal resource directory.
-* RoadClosureScreen.js	Embedded road conditions information.
-* TownSelectScreen.js	Manual municipality selection.
-* PdfViewScreen.js	Emergency PDF viewing interface.
-* weather.js	Weather alert retrieval and risk calculation.
-* database.js	SQLite initialization and local data management.
-* location.js	Location handling and municipality-related data.
-* municipalUtilities.js	Municipal utility information.
-* notifications.js	Local notification functionality.
-* backgroundTask.js	Background task registration.
-* pdfExport.js	Emergency PDF generation.
-* shelters.js	Shelter information.
-* treeCompanies.js	Tree removal company information.
-* styles.js	Shared application styling.
-* app.json	Expo application configuration.
-* package.json	Dependencies and project scripts.
-* ios/	Native iOS project files.
-* android/	Native Android project files.
-* assets/	Application assets.
-
-Getting Started
-
-These instructions are intended for developers who want to inspect, modify, or run the project locally.
-
-Prerequisites
-
-You’ll need:
-
-* Git.
-* Node.js and npm.
-* A compatible development environment for Expo SDK 54.
-* Xcode and the required Apple development tools for local iOS builds on macOS.
-* Android Studio and the Android SDK for local Android builds.
-* A compatible physical device or simulator/emulator.
-
-Important: GridShield NJ uses native modules and a custom Expo development client. Expo Go is not the supported development environment for the current configuration.
-
-1. Clone the repository
-
-Open a terminal and run:
-
+```bash
 git clone https://github.com/alexkothari/GridShield-NJ.git
 cd GridShield-NJ
+```
 
-2. Install dependencies
+**2. Install dependencies**
 
-Install the project’s JavaScript dependencies:
-
+```bash
 npm install
+```
 
-The repository includes package-lock.json to help keep dependency installations consistent.
+**3. Build and launch a native app**
 
-3. Run the application
+```bash
+npm run ios       # iOS (macOS + Xcode required)
+npm run android   # Android (Android Studio required)
+```
 
-The project defines commands for launching native iOS and Android builds.
+**4. Start the development server**
 
-For iOS:
-
-npm run ios
-
-For Android:
-
-npm run android
-
-These commands use Expo’s native run commands to build and launch the application in the corresponding development environment.
-
-For iOS, you’ll need a compatible macOS development environment with Xcode configured. For Android, you’ll need Android Studio and the appropriate Android development tools.
-
-4. Start the development server
-
-To start the Expo development server, run:
-
+```bash
 npx expo start --dev-client
+```
 
-This starts the server for a custom development client.
+If the native app hasn't been built and installed yet, complete step 3 first. On a physical device you may need to scan the QR code or enter the dev server address manually, depending on your network.
 
-If you’re using a physical device, ensure it can communicate with the development computer. Depending on your network configuration, you may need to scan the development QR code or enter the development server address manually.
+## 🔌 Data sources & connectivity
 
-If the native application has not yet been built and installed, follow the platform-specific setup requirements before attempting to launch it.
+| Source | Used for | Notes |
+|---|---|---|
+| [NWS Alerts API](https://api.weather.gov/alerts/active) | Active weather alerts | Needs network access. No API key required. |
+| [511NJ](https://511nj.org/) | Road incidents and closures | Embedded page. You may need to select Morris County manually. |
+| Device location | Finding your municipality | Optional. You can choose a town manually if access is denied. |
+| On-device SQLite | Contacts and risk history | Available offline. |
 
-Data Sources and Connectivity
+## 🗂️ Project structure
 
-Weather Alerts
+<details>
+<summary><b>Click to expand</b></summary>
 
-GridShield NJ retrieves active weather alerts from the National Weather Service:
+<br />
 
-* API endpoint: https://api.weather.gov/alerts/active
+```text
+GridShield-NJ/
+├── App.js                      # Entry point and navigation
+│
+├── Screens
+│   ├── DirectoryScreen.js      # Main screen: risk info, contacts, resources
+│   ├── RiskDetailScreen.js     # Explains the risk assessment
+│   ├── CheckLogScreen.js       # Risk and check history
+│   ├── TriageScreen.js         # Medical triage
+│   ├── ShelterScreen.js        # Cooling and warming center map
+│   ├── TreeCompanyScreen.js    # Tree removal directory
+│   ├── RoadClosureScreen.js    # Embedded road conditions
+│   ├── TownSelectScreen.js     # Manual municipality selection
+│   └── PdfViewScreen.js        # Emergency PDF viewer
+│
+├── Logic & data
+│   ├── weather.js              # Alert retrieval and risk calculation
+│   ├── database.js             # SQLite setup and local data
+│   ├── location.js             # Location and municipality handling
+│   ├── municipalUtilities.js   # Municipal utility info
+│   ├── notifications.js        # Local notifications
+│   ├── backgroundTask.js       # Background task registration
+│   ├── pdfExport.js            # Emergency PDF generation
+│   ├── shelters.js             # Shelter data
+│   └── treeCompanies.js        # Tree removal company data
+│
+├── styles.js                   # Shared styling
+├── app.json                    # Expo configuration
+├── package.json                # Dependencies and scripts
+├── android/  ios/              # Native project files
+└── assets/                     # Icons and images
+```
 
-Weather alert availability depends on network connectivity and the external service.
+</details>
 
-Road Conditions
+## ⚠️ Current limitations
 
-Road condition information is provided through the official 511NJ website:
+GridShield NJ is under active development.
 
-* Website: https://511nj.org/
+- The interface and overall experience may still change.
+- Production builds and public mobile distribution need additional setup.
+- Resource information can go out of date, so verify it independently.
 
-The embedded road conditions page may require users to select Morris County manually.
+Please don't treat the app as your only source of information in an emergency.
 
-Location
+## 🗺️ Roadmap
 
-The application can use device location to determine a municipality. Users can also select a municipality manually when location access is denied or unavailable.
+Planned work, not commitments to specific dates:
 
-Location access should be granted only when desired. Exact behavior depends on the device’s permission settings and application configuration.
+- [ ] Expand verified shelter information across New Jersey
+- [ ] Grow the tree removal directory
+- [ ] Improve the interface and accessibility
+- [ ] Refine branding and app metadata
+- [ ] Set up production build and distribution workflows
+- [ ] Broader testing, with possible app-store distribution
 
-Local Data
-
-SQLite stores selected information on the device.
-
-Offline availability does not mean every application feature works offline. Live weather data, road conditions, and other network-dependent services may be unavailable during an outage.
-
-Current Limitations
-
-GridShield NJ is an active development project.
-
-Current limitations include:
-
-* The user interface and overall experience may undergo further refinement.
-* Native production builds and public mobile distribution require additional setup.
-* Resource information can become outdated and should be independently verified.
-
-The application should not be the sole source of information during an emergency.
-
-Roadmap
-
-Planned development includes:
-
-* Expanding verified shelter information across NJ.
-* Expanding the tree removal directory.
-* Further user interface and accessibility improvements.
-* Refining application branding and metadata.
-* Configuring production build and distribution workflows.
-* Preparing for broader testing and potential mobile app-store distribution.
-
-These items are planned work, not commitments to specific release dates.
-
-Contributing
+## 🤝 Contributing
 
 Suggestions, bug reports, and contributions are welcome.
 
-To propose a change:
+1. **Fork** the repository
+2. **Create a branch** for your work
+3. **Make and test** your changes
+4. **Commit** with a descriptive message
+5. **Push** your branch and open a **pull request**
 
-1. Fork the repository.
-2. Create a branch for your work.
-3. Make and test your changes.
-4. Commit your changes with a descriptive message.
-5. Push your branch and open a pull request.
+When reporting a bug, include your device or simulator, the steps to reproduce it, and any error messages you can share safely. Please keep private information, credentials, API secrets, and sensitive location data out of issues and pull requests.
 
-For bug reports, include the device or simulator, relevant steps to reproduce the issue, and any error messages that can be shared safely.
+## 📜 License
 
-Please do not include private information, credentials, API secrets, or sensitive location data in issues or pull requests.
+A license has not been chosen yet. Until one is added to the repository, please don't assume the code is available for unrestricted reuse, modification, or redistribution.
 
-License
+<br />
 
-A license has not yet been established in this documentation.
+<div align="center">
 
-Until a license is added to the repository, do not assume that the source code is available for unrestricted reuse, modification, or redistribution.
+**Built for New Jersey communities.** Questions, ideas, or bugs? [Open an issue](https://github.com/alexkothari/GridShield-NJ/issues).
 
-Contact and Issues
-
-For project questions, feature suggestions, or bug reports, visit the repository:
-
-https://github.com/alexkothari/GridShield-NJ
+</div>
