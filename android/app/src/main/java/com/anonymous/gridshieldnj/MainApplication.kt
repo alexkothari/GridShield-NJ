@@ -1,4 +1,4 @@
-package com.anonymous.gridshieldscratch
+package com.anonymous.gridshieldnj
 
 import android.app.Application
 import android.content.res.Configuration

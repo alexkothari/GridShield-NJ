@@ -1,4 +1,4 @@
-package com.anonymous.gridshieldscratch
+package com.anonymous.gridshieldnj
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

@@ -1,6 +1,6 @@
 {
   "name": "GridShield NJ",
-  "slug": "gridshield-scratch",
+  "slug": "gridshield-nj",
   "icon": "./assets/icon.png",
   "plugins": [
     "expo-sqlite",
@@ -25,9 +25,9 @@
         "com.expo.modules.backgroundtask.processing"
       ]
     },
-    "bundleIdentifier": "com.anonymous.gridshield-scratch"
+    "bundleIdentifier": "com.anonymous.gridshieldnj"
   },
   "android": {
-    "package": "com.anonymous.gridshieldscratch"
+    "package": "com.anonymous.gridshieldnj"
   }
 }
