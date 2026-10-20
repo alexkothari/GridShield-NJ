@@ -8,28 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		286EA9A2106B7F1DF6FAD33F /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFD6527A0C95A04157C139D /* ExpoModulesProvider.swift */; };
+		2C8ADBA5512EFC8C7AF50A89 /* libPods-GridShieldNJ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE862C153371FA0F6F0703A0 /* libPods-GridShieldNJ.a */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		9135A0A0AB5D33965433D89F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 695FF5AED4A8FC8F296EAD47 /* PrivacyInfo.xcprivacy */; };
+		475251B9EA41EF1FBD3F2DDE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DBF838233A408CA7E146120A /* PrivacyInfo.xcprivacy */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
-		E48D0B30174106E74F400335 /* libPods-GridShieldNJ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9D61B2E739199A56C515EC /* libPods-GridShieldNJ.a */; };
+		D8AC657A96371099491B6BE1 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9563A99114BF80BEE671A85B /* ExpoModulesProvider.swift */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0EBDAA31D9C377220E461892 /* Pods-GridShieldNJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridShieldNJ.debug.xcconfig"; path = "Target Support Files/Pods-GridShieldNJ/Pods-GridShieldNJ.debug.xcconfig"; sourceTree = "<group>"; };
+		0FD7D025646253A5249BD015 /* Pods-GridShieldNJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridShieldNJ.release.xcconfig"; path = "Target Support Files/Pods-GridShieldNJ/Pods-GridShieldNJ.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* GridShieldNJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridShieldNJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GridShieldNJ/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = GridShieldNJ/Info.plist; sourceTree = "<group>"; };
-		695FF5AED4A8FC8F296EAD47 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = GridShieldNJ/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		7025DE58EBDB886654BDD20B /* Pods-GridShieldNJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridShieldNJ.release.xcconfig"; path = "Target Support Files/Pods-GridShieldNJ/Pods-GridShieldNJ.release.xcconfig"; sourceTree = "<group>"; };
+		501C741F6C0C426DAF1B8DA2 /* Pods-GridShieldNJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridShieldNJ.debug.xcconfig"; path = "Target Support Files/Pods-GridShieldNJ/Pods-GridShieldNJ.debug.xcconfig"; sourceTree = "<group>"; };
+		9563A99114BF80BEE671A85B /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-GridShieldNJ/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = GridShieldNJ/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		DBFD6527A0C95A04157C139D /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-GridShieldNJ/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		CE862C153371FA0F6F0703A0 /* libPods-GridShieldNJ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GridShieldNJ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBF838233A408CA7E146120A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = GridShieldNJ/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = GridShieldNJ/AppDelegate.swift; sourceTree = "<group>"; };
 		F11748442D0722820044C1D9 /* GridShieldNJ-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GridShieldNJ-Bridging-Header.h"; path = "GridShieldNJ/GridShieldNJ-Bridging-Header.h"; sourceTree = "<group>"; };
-		FB9D61B2E739199A56C515EC /* libPods-GridShieldNJ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GridShieldNJ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E48D0B30174106E74F400335 /* libPods-GridShieldNJ.a in Frameworks */,
+				2C8ADBA5512EFC8C7AF50A89 /* libPods-GridShieldNJ.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +53,7 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				695FF5AED4A8FC8F296EAD47 /* PrivacyInfo.xcprivacy */,
+				DBF838233A408CA7E146120A /* PrivacyInfo.xcprivacy */,
 			);
 			name = GridShieldNJ;
 			sourceTree = "<group>";
@@ -62,19 +62,26 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				FB9D61B2E739199A56C515EC /* libPods-GridShieldNJ.a */,
+				CE862C153371FA0F6F0703A0 /* libPods-GridShieldNJ.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		610BA24F9E70DA620FC46234 /* Pods */ = {
+		3A004B64AFAA99E094D96E6E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0EBDAA31D9C377220E461892 /* Pods-GridShieldNJ.debug.xcconfig */,
-				7025DE58EBDB886654BDD20B /* Pods-GridShieldNJ.release.xcconfig */,
+				501C741F6C0C426DAF1B8DA2 /* Pods-GridShieldNJ.debug.xcconfig */,
+				0FD7D025646253A5249BD015 /* Pods-GridShieldNJ.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		661EA3940860C0AF75D92A5D /* GridShieldNJ */ = {
+			isa = PBXGroup;
+			children = (
+				9563A99114BF80BEE671A85B /* ExpoModulesProvider.swift */,
+			);
+			name = GridShieldNJ;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -91,8 +98,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				610BA24F9E70DA620FC46234 /* Pods */,
-				B9603457DBECA6F7F19575AA /* ExpoModulesProviders */,
+				3A004B64AFAA99E094D96E6E /* Pods */,
+				F9279242E3E48E750B283EB7 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -107,14 +114,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9603457DBECA6F7F19575AA /* ExpoModulesProviders */ = {
-			isa = PBXGroup;
-			children = (
-				BC03B1A8135D6F82F51EA7E5 /* GridShieldNJ */,
-			);
-			name = ExpoModulesProviders;
-			sourceTree = "<group>";
-		};
 		BB2F792B24A3F905000567C9 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,12 +123,12 @@
 			path = GridShieldNJ/Supporting;
 			sourceTree = "<group>";
 		};
-		BC03B1A8135D6F82F51EA7E5 /* GridShieldNJ */ = {
+		F9279242E3E48E750B283EB7 /* ExpoModulesProviders */ = {
 			isa = PBXGroup;
 			children = (
-				DBFD6527A0C95A04157C139D /* ExpoModulesProvider.swift */,
+				661EA3940860C0AF75D92A5D /* GridShieldNJ */,
 			);
-			name = GridShieldNJ;
+			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,13 +139,13 @@
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "GridShieldNJ" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				D16507F21F302E8175EDCB82 /* [Expo] Configure project */,
+				313FF60DE4BC4EAA704A2915 /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				4860E2E8849F4910E510B097 /* [CP] Embed Pods Frameworks */,
+				AEC796E444F5832B71C0BDB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,7 +195,7 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				9135A0A0AB5D33965433D89F /* PrivacyInfo.xcprivacy in Resources */,
+				475251B9EA41EF1FBD3F2DDE /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,27 +241,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4860E2E8849F4910E510B097 /* [CP] Embed Pods Frameworks */ = {
+		313FF60DE4BC4EAA704A2915 /* [Expo] Configure project */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GridShieldNJ/Pods-GridShieldNJ-frameworks.sh",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/React-Core-prebuilt/React.framework/React",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ReactNativeDependencies/ReactNativeDependencies.framework/ReactNativeDependencies",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env",
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/GridShieldNJ/GridShieldNJ.entitlements",
+				"$(SRCROOT)/Pods/Target Support Files/Pods-GridShieldNJ/expo-configure-project.sh",
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactNativeDependencies.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
+				"$(SRCROOT)/Pods/Target Support Files/Pods-GridShieldNJ/ExpoModulesProvider.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GridShieldNJ/Pods-GridShieldNJ-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-GridShieldNJ/expo-configure-project.sh\"\n";
 		};
 		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -302,29 +303,27 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GridShieldNJ/Pods-GridShieldNJ-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D16507F21F302E8175EDCB82 /* [Expo] Configure project */ = {
+		AEC796E444F5832B71C0BDB0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"$(SRCROOT)/.xcode.env",
-				"$(SRCROOT)/.xcode.env.local",
-				"$(SRCROOT)/GridShieldNJ/GridShieldNJ.entitlements",
-				"$(SRCROOT)/Pods/Target Support Files/Pods-GridShieldNJ/expo-configure-project.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GridShieldNJ/Pods-GridShieldNJ-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/React-Core-prebuilt/React.framework/React",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ReactNativeDependencies/ReactNativeDependencies.framework/ReactNativeDependencies",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
 			);
-			name = "[Expo] Configure project";
-			outputFileListPaths = (
-			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(SRCROOT)/Pods/Target Support Files/Pods-GridShieldNJ/ExpoModulesProvider.swift",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactNativeDependencies.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/hermes.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-GridShieldNJ/expo-configure-project.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GridShieldNJ/Pods-GridShieldNJ-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -334,7 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
-				286EA9A2106B7F1DF6FAD33F /* ExpoModulesProvider.swift in Sources */,
+				D8AC657A96371099491B6BE1 /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,12 +342,15 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EBDAA31D9C377220E461892 /* Pods-GridShieldNJ.debug.xcconfig */;
+			baseConfigurationReference = 501C741F6C0C426DAF1B8DA2 /* Pods-GridShieldNJ.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GridShieldNJ/GridShieldNJ.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y8J3923YPN;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -367,8 +369,9 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.gridshieldnj";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anonymous.gridshieldnj;
 				PRODUCT_NAME = GridShieldNJ;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GridShieldNJ/GridShieldNJ-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -379,12 +382,15 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7025DE58EBDB886654BDD20B /* Pods-GridShieldNJ.release.xcconfig */;
+			baseConfigurationReference = 0FD7D025646253A5249BD015 /* Pods-GridShieldNJ.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GridShieldNJ/GridShieldNJ.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y8J3923YPN;
 				INFOPLIST_FILE = GridShieldNJ/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -398,8 +404,9 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.anonymous.gridshieldnj";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anonymous.gridshieldnj;
 				PRODUCT_NAME = GridShieldNJ;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GridShieldNJ/GridShieldNJ-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
